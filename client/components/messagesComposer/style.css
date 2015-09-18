@@ -1,0 +1,15 @@
+.messages-composer__box
+{
+    width: 400px;
+    height: 100px;
+
+    box-sizing: border-box;
+}
+.messages-composer__button
+{
+    width: 100px;
+    height: 100px;
+
+    box-sizing: border-box;
+    vertical-align: top;
+}

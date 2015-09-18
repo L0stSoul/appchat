@@ -1,0 +1,7 @@
+.message-list
+{
+    font: 16px Sans-serif;
+    width: 500px;
+    height: 300px;
+    border-bottom: 1px solid black
+}
