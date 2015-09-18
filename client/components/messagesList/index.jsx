@@ -1,9 +1,9 @@
 import './style.css'
 
-import React from 'react';
+import React, {Component, PropTypes}  from 'react';
 import Message from '../message/index.jsx';
 
-export default class MessagesList extends React.Component {
+export default class MessagesList extends Component {
     render() {
         return (
             <div className="message-list">
@@ -13,4 +13,12 @@ export default class MessagesList extends React.Component {
             </div>
         )
     }
+}
+
+MessagesList.propTypes = {
+    messages: PropTypes.arrayOf(
+        PropTypes.shape({
+            message: PropTypes.string.isRequired
+        }).isRequired
+    ).isRequired
 }

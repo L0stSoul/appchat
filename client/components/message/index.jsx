@@ -1,8 +1,8 @@
 import './style.css'
 
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 
-export default class Message extends React.Component {
+export default class Message extends Component {
     render() {
         return (
             <div className="message">
@@ -10,4 +10,10 @@ export default class Message extends React.Component {
             </div>
         )
     }
+}
+
+Message.propTypes = {
+    message: PropTypes.shape({
+        message: PropTypes.string.isRequired
+    }).isRequired
 }

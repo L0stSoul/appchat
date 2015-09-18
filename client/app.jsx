@@ -1,9 +1,9 @@
-import React from 'react';
+import React {Component} from 'react';
 
 import MessagesList from './components/messagesList/index.jsx';
 import MessagesComposer from './components/messagesComposer/index.jsx';
 
-export default class App extends React.Component {
+export default class App extends Component {
     sendMessage(value) {
         this.setState({ messages: this.state.messages.concat({ text: value }) })
     }
@@ -16,7 +16,7 @@ export default class App extends React.Component {
         return(
             <div>
                 <MessagesList messages={this.state.messages} />
-                <MessagesComposer sendMessage={this.sendMessage.bind(this)} />
+                <MessagesComposer onSendRequested={(value) => this.sendMessage(value)} />
             </div>
         )
     }
