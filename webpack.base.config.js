@@ -3,7 +3,7 @@ import Autoprefixer from 'autoprefixer';
 export default {
     name: 'client',
     context: __dirname + "/client",
-    entry: "./app.jsx",
+    entry: "./index.jsx",
 
     output: {
         filename: "client.bundle.js",
