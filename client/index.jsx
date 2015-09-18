@@ -1,25 +1,12 @@
 import React from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
 
 import App from './components/app/index.jsx';
+import reducer from './reducers/index.js';
 
-const sampleState = {
-    messages: [
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world!',
-        },
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world! 2',
-        },
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world! 2',
-        }
-    ]
-}
-
-React.render(<App e={sampleState}/>, document.getElementById('app'))
+React.render(
+    <Provider store={createStore(reducer)}>
+        {() => <App/>}
+    </Provider>
+, document.getElementById('app'))
