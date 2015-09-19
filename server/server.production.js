@@ -1,6 +1,6 @@
 import Express from 'express';
-import Server from './server.js';
+import {http, app} from './server.js';
 
-Server.use(Express.static('bundle'));
+app.use(Express.static('bundle'));
 
-Server.listen(3005);
+http.listen(3005);

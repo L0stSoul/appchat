@@ -1,20 +1,5 @@
 const initialState = {
     messages: [
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world!',
-        },
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world! 2',
-        },
-        {
-            senderId: 1,
-            channelId: 1,
-            text: 'Hello world! 2',
-        }
     ]
 }
 
